@@ -6,4 +6,8 @@ public interface Converter {
 
 	String convertToString(int intToString);
 
+	String[] convertStringToArray(String stringToArray);
+
+	int[] convertStringArrayToIntArray(String[] stringArray);
+
 }
