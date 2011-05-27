@@ -10,4 +10,6 @@ public interface Converter {
 
 	int[] convertStringArrayToIntArray(String[] stringArray);
 
+	int[] invertArray(int[] arrayToInvert);
+
 }

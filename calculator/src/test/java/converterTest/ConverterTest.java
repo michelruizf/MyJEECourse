@@ -43,4 +43,16 @@ public class ConverterTest{
 		int[] expected = {1,2,3};
 		assertArrayEquals("String array converted to int array", expected, result);
 	}
+	
+	@Test
+	public void invertArray(){
+		int[] array = {1,2,3};
+		Converter converter = new StringConverter();
+		int[] result =converter.invertArray(array);
+		
+		int[] expected = {3,2,1};
+		
+		assertArrayEquals("Invert array", expected, result);
+	}
+	
 }
