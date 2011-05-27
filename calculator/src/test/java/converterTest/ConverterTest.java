@@ -1,9 +1,14 @@
 package converterTest;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Test;
 
+import calculator.ArrayCalculator;
 import converter.Converter;
 import converter.StringConverter;
 
@@ -53,6 +58,20 @@ public class ConverterTest{
 		int[] expected = {3,2,1};
 		
 		assertArrayEquals("Invert array", expected, result);
+	}
+	
+	@Test
+	public void addArrays(){
+		int[] largerArray = {1,2,3};
+		int[] smallerArray = {9,8};
+		
+		ArrayCalculator simpleCalculator = new ArrayCalculator();
+		List<Integer> result = simpleCalculator.addArrays(largerArray, smallerArray);
+		
+		List<Integer> expecteds = Arrays.asList(2,2,1);
+		
+		
+		assertEquals("Result of add arrays", expecteds, result);
 	}
 	
 }
